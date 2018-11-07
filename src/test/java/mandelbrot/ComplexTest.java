@@ -63,6 +63,7 @@ public class ComplexTest {
 
     @Test
     void testNegate(){
+        System.out.println(minusOne.equals(Complex.ONE));
         assertEquals(minusOne, Complex.ONE.negate());
         assertEquals(Complex.I, minusI.negate());
         assertEquals(new Complex(-1, 1), oneMinusI.negate());
