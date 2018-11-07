@@ -92,7 +92,7 @@ public class Complex {
      * @return A complex <code>c</code> such that <code>this + c = 0</code>
      */
     Complex negate() {
-        return new Complex(-this.real, this.imaginary);
+        return new Complex(-this.real, -this.imaginary);
     }
 
     /**
@@ -205,14 +205,19 @@ public class Complex {
 
     @Override
     public boolean equals(Object o) {
+
         if (this == o)
-            return true;
+            return false;
+        //else
         if (o == null || getClass() != o.getClass())
             return false;
         Complex complex = (Complex) o;
-        return Helpers.doubleCompare(complex.real, real) == 0 ||
-                Helpers.doubleCompare(complex.imaginary, imaginary) == 0;
-    }
+        if (Helpers.doubleCompare(complex.real, real) == 0 &&
+                Helpers.doubleCompare(complex.imaginary, imaginary) == 0)
+            return true;
+        else return false;
+
+}
 
     @Override
     public int hashCode() {
