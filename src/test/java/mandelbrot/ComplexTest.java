@@ -158,5 +158,12 @@ public class ComplexTest {
         assertEquals(new Complex(4, 4), new Complex(2, 2).add(new Complex(2, 2)));
         // assertEquals(new Complex(4, 4), new Complex(2, 2).add(new Complex(1,2)));
         assertEquals(new Complex(5, 3), new Complex(2, 2).add(new Complex(3, 1)));
+        assertEquals(new Complex(-2, 3), new Complex(2, 2).add(new Complex(-4, 1)));
+    }
+    @Test
+    void testMultiply() {
+        assertEquals(new Complex(0, 8), new Complex(2, 2).multiply(new Complex(2, 2)));
+        //assertEquals(new Complex(0, 4), new Complex(2, 2).multiply(new Complex(2, 2)));
+        assertEquals(new Complex(-6, 18), new Complex(3, 6).multiply(new Complex(2, 2)));
     }
 }
