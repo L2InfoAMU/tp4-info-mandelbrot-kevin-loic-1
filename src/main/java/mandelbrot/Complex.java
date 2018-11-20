@@ -127,15 +127,15 @@ public class Complex {
     Complex multiply(Complex factor) {
         return new Complex(
                 this.real * factor.real - this.imaginary * factor.imaginary,
-                this.real * factor.imaginary + this.imaginary * factor.imaginary
-        );
+                this.real * factor.imaginary + this.imaginary * factor.real);
     }
 
-    /**
-     * Squared modulus of a complex number
-     *
-     * @return <code>||this|| ** 2</code>
-     */
+
+                /**
+                 * Squared modulus of a complex number
+                 *
+                 * @return <code>||this|| ** 2</code>
+                 */
     double squaredModulus() {
         return real * real * imaginary * imaginary;
     }
@@ -186,6 +186,7 @@ public class Complex {
      *
      * @param p a non-negative integer
      * @return the complex number <code>this ** p</code>
+     * //puissance entière d'un complexe
      */
     Complex pow(int p) {
         if (p == 0)
