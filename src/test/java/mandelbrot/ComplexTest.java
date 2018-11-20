@@ -169,6 +169,12 @@ public class ComplexTest {
         assertEquals(10, new Complex(3, -1).squaredModulus());
         assertEquals(13, new Complex(-3, -2).squaredModulus());
     }
+
+    @Test
+    void testModulus() {
+        assertEquals(5, new Complex(5, 0).modulus());
+        assertEquals(6, new Complex(-6, 0).modulus());
+    }
     @Test
     void testScale() {
         assertEquals(new Complex(4, 4), new Complex(2, 2).scale(2));

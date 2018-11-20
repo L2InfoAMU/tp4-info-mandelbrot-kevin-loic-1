@@ -157,11 +157,11 @@ public class Complex {
      * @return a complex number <code>c</code> such that <code>this * c = 1</code>
      */
     Complex reciprocal() {
-        if (this.equals(ONE)){
-            throw new ArithmeticException("divide by zero");
+        if (this.real == 0 && this.imaginary == 0){
+            throw new ArithmeticException("reciprocal of 0 undefined");
         }
         double m = squaredModulus();
-        return new Complex(real / m, imaginary / m);
+        return new Complex(real / m, -imaginary / m);
     }
 
     /**
