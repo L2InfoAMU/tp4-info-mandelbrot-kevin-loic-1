@@ -188,4 +188,10 @@ public class ComplexTest {
         assertEquals(new Complex(-8, 4), new Complex(-1, 3).multiply(new Complex(2, 2)));
         assertEquals(new Complex(0, 0), new Complex(0, 0).multiply(new Complex(2, 2)));
     }
+    @Test
+    void testPow(){
+        assertEquals(new Complex(1,0),new Complex(2,3).pow(0));
+        assertEquals(new Complex(-5,12),new Complex(2,3).pow(2));
+        assertEquals(new Complex(-46,9),new Complex(2,3).pow(3));
+    }
 }
